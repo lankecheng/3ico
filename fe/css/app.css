@@ -1087,4 +1087,20 @@ a {
       margin: 30px 0 0 30px;
       border: 1px solid #e3e3e3; }
 
+.project .main:before, .project .main:after {
+  content: "";
+  display: table; }
+
+.project .main:after {
+  clear: both; }
+
+.project .left {
+  float: left;
+  width: 786px;
+  min-height: 600px; }
+
+.project .right {
+  float: right;
+  width: 343px; }
+
 /*# sourceMappingURL=app.css.map*/
