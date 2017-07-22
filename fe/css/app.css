@@ -425,6 +425,17 @@ a {
 .primary-color {
   color: #22a875; }
 
+.Module.top {
+  padding: 35px 0;
+  background-color: #373737; }
+  .Module.top .title {
+    font-size: 30px;
+    color: #fff; }
+  .Module.top .crumb {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(245, 245, 245, 0.6); }
+
 .Frame.top {
   height: 49px;
   overflow: hidden;
@@ -1308,5 +1319,66 @@ a {
       line-height: 2; }
     .project .right .mod.bottom .control {
       margin-top: 30px; }
+
+.project-list .tabs {
+  margin-top: 40px;
+  border-bottom: 1px solid #e3e3e3; }
+  .project-list .tabs ul {
+    margin: 0;
+    margin-bottom: -1px;
+    padding: 0;
+    list-style: none; }
+    .project-list .tabs ul:before, .project-list .tabs ul:after {
+      content: "";
+      display: table; }
+    .project-list .tabs ul:after {
+      clear: both; }
+  .project-list .tabs li {
+    float: left;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #333; }
+    .project-list .tabs li a {
+      display: block;
+      padding: 10px;
+      color: #333;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: transparent; }
+      .project-list .tabs li a.active, .project-list .tabs li a:hover {
+        border-bottom-color: #005bac; }
+
+.project-list .list {
+  padding-bottom: 70px; }
+  .project-list .list table {
+    margin-top: 30px;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: 0;
+    border-spacing: 0; }
+    .project-list .list table th {
+      padding: 16px 10px;
+      background-color: #f6f6f6;
+      font-size: 16px;
+      color: #333;
+      text-align: left; }
+    .project-list .list table tbody td {
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #333; }
+    .project-list .list table tbody .name {
+      margin-bottom: 16px;
+      color: #005bac;
+      font-size: 16px;
+      font-weight: bold; }
+    .project-list .list table tbody .link {
+      display: block;
+      padding: 5px;
+      background-color: #23ab77;
+      color: #fff;
+      text-align: center;
+      border-radius: 3px; }
+      .project-list .list table tbody .link:hover {
+        opacity: 0.9; }
 
 /*# sourceMappingURL=app.css.map*/
