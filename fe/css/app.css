@@ -415,7 +415,7 @@ a {
 .View.container {
   position: relative;
   margin: 0 auto;
-  width: 1170px; }
+  width: 1000px; }
   .View.container:before, .View.container:after {
     content: "";
     display: table; }
@@ -456,7 +456,8 @@ a {
     color: #fff;
     background-color: #22a875;
     border-radius: 3px;
-    cursor: pointer; }
+    cursor: pointer;
+    vertical-align: middle; }
   .Frame.top .ico-phone {
     display: inline-block;
     width: 20px;
@@ -566,16 +567,19 @@ a {
       background-position: -60px 0; }
   .Frame.bottom .menus {
     float: left;
-    width: 215px; }
+    width: 180px; }
   .Frame.bottom .contact {
     margin-left: 35px;
     float: left;
-    width: 215px; }
+    width: 180px; }
   .Frame.bottom .map {
     margin-left: 35px;
     float: left;
-    width: 470px;
-    text-align: center; }
+    width: 400px;
+    text-align: center;
+    overflow: hidden; }
+    .Frame.bottom .map img {
+      width: 100%; }
   .Frame.bottom .follow {
     margin-left: 35px;
     padding-top: 25px;
@@ -597,8 +601,8 @@ a {
 .home .banner-swiper {
   position: relative;
   width: 100%;
-  height: 730px;
-  min-width: 1170px;
+  height: 600px;
+  min-width: 1000px;
   overflow: hidden; }
   .home .banner-swiper .swiper-slide {
     background-repeat: no-repeat;
@@ -690,7 +694,7 @@ a {
     list-style: none; }
   .home .Module.info .left {
     float: left;
-    width: 567px; }
+    width: 482px; }
     .home .Module.info .left .hd {
       margin-bottom: 20px; }
     .home .Module.info .left .bd li {
@@ -724,7 +728,7 @@ a {
       color: #15a7ed; }
   .home .Module.info .right {
     float: right;
-    width: 567px; }
+    width: 482px; }
     .home .Module.info .right .top {
       position: relative;
       padding: 20px 0 20px 132px;
@@ -880,7 +884,7 @@ a {
   .home .projects .bd li {
     float: left;
     margin: 25px 0 0 25px;
-    width: 262px;
+    width: 219px;
     overflow: hidden;
     padding: 4px;
     background-color: #fff;
@@ -889,15 +893,15 @@ a {
   .home .projects .bd .top {
     position: relative;
     width: 100%;
-    height: 262px;
+    height: 219px;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 3px; }
     .home .projects .bd .top .tip {
       position: absolute;
-      top: 30px;
-      left: -80px;
+      top: 20px;
+      left: -70px;
       width: 100%;
       padding: 10px 0;
       font-size: 18px;
@@ -911,7 +915,7 @@ a {
               box-sizing: border-box;
       position: absolute;
       width: 100%;
-      top: 183px;
+      top: 140px;
       padding: 12px 15px;
       background-color: rgba(0, 0, 0, 0.4);
       color: #fff;
@@ -931,7 +935,7 @@ a {
       color: #22a875; }
     .home .projects .bd .progress .bar {
       display: inline-block;
-      width: 197px;
+      width: 154px;
       height: 14px;
       background-color: #f1f1f1;
       border-radius: 14px;
@@ -961,9 +965,10 @@ a {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       display: inline-block;
-      width: 32%;
+      width: 30%;
       padding: 0 10px;
-      font-size: 14px; }
+      font-size: 14px;
+      vertical-align: top; }
       .home .projects .bd .info .item .val {
         display: block;
         height: 16px;
@@ -1094,7 +1099,12 @@ a {
     .home .partner .bd li {
       float: left;
       margin: 30px 0 0 30px;
+      width: 223px;
+      overflow: hidden;
       border: 1px solid #e3e3e3; }
+      .home .partner .bd li img {
+        display: block;
+        width: 100%; }
 
 .project > .main {
   padding-bottom: 60px; }
@@ -1120,7 +1130,7 @@ a {
 
 .project .left {
   float: left;
-  width: 786px;
+  width: 616px;
   min-height: 600px; }
 
 .project .right {

@@ -47,9 +47,7 @@
             <li>
                 <a href="javascript:;">项目信息</a>
             </li>
-            <li>
-                <a href="javascript:;">push集市</a>
-            </li>
+            
             <li>
                 <a href="javascript:;">关于我们</a>
             </li>
@@ -164,7 +162,7 @@
                 <ul>
                     <li><i class="ico arrow"></i><a href="javascript:;">首页</a></li>
                     <li><i class="ico arrow"></i><a href="javascript:;">项目信息</a></li>
-                    <li><i class="ico arrow"></i><a href="javascript:;">PUSH集市</a></li>
+                    
                     <li><i class="ico arrow"></i><a href="javascript:;">关于我们</a></li>
                     <li><i class="ico arrow"></i><a href="javascript:;">联系我们</a></li>
                 </ul>
@@ -217,7 +215,7 @@
     var pid = location.search.split('=')[1];
     $.ajax({
         type: 'get',
-        url: 'http://172.16.200.15:8080/api/project_info',
+        url: 'http://119.23.160.90:8080/api/project_info',
         data: {
             pid: pid
         },
@@ -240,7 +238,7 @@
         if (!price) return;
         $.ajax({
             type: 'post',
-            url: 'http://172.16.200.15:8080/api/user/invest/do',
+            url: 'http://119.23.160.90:8080/api/user/invest/do',
             data: {
                 pid: pid,
                 amount: price,
