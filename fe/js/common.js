@@ -22,8 +22,10 @@
             Authorization: localStorage.getItem('token'),
         }
     }).then(function (res) {
+        console.log(res);
         $('#js-login').html('<a href="/manage/index.html#/admin"><i class="ico-user"></i>个人中心</a>');
         $('#js-register').html('<span id="js-logout" class="register">退出</span>');
+        $('.js-user-yue').html('');
     });
 
     $(document).on('click', '#js-logout', function () {

@@ -70,14 +70,14 @@
         <div class="View container">
             <div class="left">这里输出项目内容</div>
             <div class="right">
-                <div id="js-info" class="mod info" style="display: none">
+                <div id="js-info" class="mod info">
                     <div class="item">
                         <span class="label">支持人数</span>
                         <div id="js-number" class="content">0</div>
                     </div>
                     <div class="item">
                         <span class="label">目标数量</span>
-                        <div id="js-target-amount" class="content">0</div>
+                        <div class="js-target-amount" class="content">0</div>
                     </div>
                     
                     <div class="progress">
@@ -90,6 +90,10 @@
                             <span id="js-end-time" class="primary-color">0</span>
                             前结束，有任何问题需要咨询请联系客服！
                         </div>
+                    </div>
+                    <div class="item">
+                        <span class="label">余额</span>
+                        <div id="js-balance" class="content">0</div>
                     </div>
                     <div class="control">
                         <input id="js-pay-input" type="text" name="" placeholder="输入支持数量">
@@ -122,34 +126,14 @@
                         </div>
                     </div>
                 </div>
-                <div id="js-BTC" class="mod bottom" style="display: none">
+                <div id="js-ETH" class="mod bottom">
                     <div class="hd">
-                        <span class="title">
-                        <span class="primary">B/</span>
-                        金额不限</span>
+                        <span class="js-target-amount title"></span>
                         <span class="joined">已参与<span class="primary-color">600</span>人</span>
                     </div>
                     <div class="bd">
                         不限投资人数<br>
                         回报时间：预计项目ICO成功结束后30天内
-                    </div>
-                    <div class="control">
-                        <div class="btn">立即支持</div>
-                    </div>
-                </div>
-                <div id="js-ETH" class="mod bottom" style="display: none">
-                    <div class="hd">
-                        <span class="title">
-                        <span class="primary">ETH/</span>
-                        金额不限</span>
-                        <span class="joined">已参与<span class="primary-color">600</span>人</span>
-                    </div>
-                    <div class="bd">
-                        不限投资人数<br>
-                        回报时间：预计项目ICO成功结束后30天内
-                    </div>
-                    <div class="control">
-                        <div class="btn">立即支持</div>
                     </div>
                 </div>
             </div>
@@ -226,7 +210,7 @@
         var project = res.project;
         var progress = Math.round((project.complete_amount/project.target_amount)*100);
         $('#js-number').html(project.number);
-        $('#js-target-amount').html(project.currency+project.target_amount);
+        $('.js-target-amount').html(project.target_amount+project.currency);
         $('#js-end-time').html(project.end_time);
         $('#js-progress-num').html(progress + '%');
         $('#js-progress-bar').css({
@@ -235,8 +219,6 @@
         if (new Date(project.begin_time).getTime() < new Date().getTime()) {
             $('#js-info').show();
         }
-
-        $('#js-' + project.currency).show();
     });
     $('#js-pay').on('click', function (e) {
         var price = $('#js-pay-input').val();

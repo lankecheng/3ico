@@ -976,9 +976,9 @@ a {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       display: inline-block;
-      width: 30%;
-      padding: 0 10px;
-      font-size: 14px;
+      width: 31%;
+      padding: 0 5px;
+      font-size: 12px;
       vertical-align: top; }
       .home .projects .bd .info .item .val {
         display: block;
@@ -1170,63 +1170,64 @@ a {
         cursor: pointer; }
         .project .right .mod .control .btn:hover {
           opacity: .9; }
-    .project .right .mod.info .item {
-      position: relative;
-      padding-left: 80px; }
-      .project .right .mod.info .item .label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 70px;
-        height: 30px;
-        line-height: 30px; }
-      .project .right .mod.info .item .content {
-        font-size: 24px;
-        line-height: 1;
-        color: #22a875; }
-      .project .right .mod.info .item + .item {
-        margin-top: 30px; }
-    .project .right .mod.info .progress {
-      margin-top: 40px; }
-      .project .right .mod.info .progress .title {
-        font-size: 16px;
-        color: #22a875; }
-      .project .right .mod.info .progress .bar {
-        margin-top: 20px;
-        display: inline-block;
-        width: 100%;
-        height: 14px;
-        background-color: #f1f1f1;
-        border-radius: 14px;
-        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
-                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
-        vertical-align: top;
-        overflow: hidden; }
-        .project .right .mod.info .progress .bar .inner {
-          -webkit-box-sizing: border-box;
-                  box-sizing: border-box;
+    .project .right .mod.info {
+      padding-top: 5px; }
+      .project .right .mod.info .item {
+        position: relative;
+        margin-top: 30px;
+        padding-left: 80px; }
+        .project .right .mod.info .item .label {
+          position: absolute;
+          top: 0;
+          left: 0;
           display: block;
-          height: 100%;
-          background-color: #7ed352;
-          border: 1px solid #52d37c;
-          border-top-left-radius: 14px;
-          border-bottom-left-radius: 14px;
-          -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset;
-                  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset; }
-      .project .right .mod.info .progress .tip {
-        margin-top: 20px;
-        color: #666;
-        font-size: 14px;
-        line-height: 1.5; }
-    .project .right .mod.info .control input {
-      width: 150px;
-      height: 48px;
-      border: 1px solid #ddd;
-      border-radius: 3px;
-      outline: none; }
-      .project .right .mod.info .control input::-webkit-input-placeholder {
-        color: #ddd; }
+          width: 70px;
+          height: 30px;
+          line-height: 30px; }
+        .project .right .mod.info .item .content {
+          font-size: 24px;
+          line-height: 1;
+          color: #22a875; }
+      .project .right .mod.info .progress {
+        margin-top: 40px; }
+        .project .right .mod.info .progress .title {
+          font-size: 16px;
+          color: #22a875; }
+        .project .right .mod.info .progress .bar {
+          margin-top: 20px;
+          display: inline-block;
+          width: 100%;
+          height: 14px;
+          background-color: #f1f1f1;
+          border-radius: 14px;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+                  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+          vertical-align: top;
+          overflow: hidden; }
+          .project .right .mod.info .progress .bar .inner {
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            display: block;
+            height: 100%;
+            background-color: #7ed352;
+            border: 1px solid #52d37c;
+            border-top-left-radius: 14px;
+            border-bottom-left-radius: 14px;
+            -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+                    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset; }
+        .project .right .mod.info .progress .tip {
+          margin-top: 20px;
+          color: #666;
+          font-size: 14px;
+          line-height: 1.5; }
+      .project .right .mod.info .control input {
+        width: 150px;
+        height: 48px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        outline: none; }
+        .project .right .mod.info .control input::-webkit-input-placeholder {
+          color: #ddd; }
     .project .right .mod.by .hd {
       font-size: 18px;
       font-weight: bold;
