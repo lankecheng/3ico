@@ -1143,6 +1143,8 @@ a {
   float: left;
   width: 616px;
   min-height: 600px; }
+  .project .left img {
+    max-width: 100%; }
 
 .project .right {
   float: right;

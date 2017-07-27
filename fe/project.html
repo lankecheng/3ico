@@ -9,7 +9,7 @@
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/swiper-3.4.2.jquery.min.js"></script>
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-<link href="../css/app.css" rel="stylesheet"></head>
+<link href="css/app.css" rel="stylesheet"></head>
 
 <body class="project">
     <div class="Frame top">
@@ -70,14 +70,14 @@
         <div class="View container">
             <div class="left">这里输出项目内容</div>
             <div class="right">
-                <div class="mod info">
+                <div id="js-info" class="mod info" style="display: none">
                     <div class="item">
                         <span class="label">支持人数</span>
                         <div id="js-number" class="content">0</div>
                     </div>
                     <div class="item">
                         <span class="label">目标数量</span>
-                        <div id="js-target-amount" class="content">￥0</div>
+                        <div id="js-target-amount" class="content">0</div>
                     </div>
                     
                     <div class="progress">
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mod bottom">
+                <div id="js-BTC" class="mod bottom" style="display: none">
                     <div class="hd">
                         <span class="title">
                         <span class="primary">B/</span>
@@ -137,7 +137,7 @@
                         <div class="btn">立即支持</div>
                     </div>
                 </div>
-                <div class="mod bottom">
+                <div id="js-ETH" class="mod bottom" style="display: none">
                     <div class="hd">
                         <span class="title">
                         <span class="primary">ETH/</span>
@@ -210,14 +210,12 @@
     </div>
 
 
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script type="text/javascript">
 (function() {
     var pid = location.search.split('=')[1];
     $.ajax({
         type: 'get',
-        url: 'http://' + window.location.host + '/api/project_info',
+        url: 'http://119.23.160.90:8080/api/project_info',
         data: {
             pid: pid
         },
@@ -228,19 +226,24 @@
         var project = res.project;
         var progress = Math.round((project.complete_amount/project.target_amount)*100);
         $('#js-number').html(project.number);
-        $('#js-target-amount').html('￥'+project.target_amount);
+        $('#js-target-amount').html(project.currency+project.target_amount);
         $('#js-end-time').html(project.end_time);
         $('#js-progress-num').html(progress + '%');
         $('#js-progress-bar').css({
             width: progress + '%'
         });
+        if (new Date(project.begin_time).getTime() < new Date().getTime()) {
+            $('#js-info').show();
+        }
+
+        $('#js-' + project.currency).show();
     });
     $('#js-pay').on('click', function (e) {
         var price = $('#js-pay-input').val();
         if (!price) return;
         $.ajax({
             type: 'post',
-            url: 'http://' + window.location.host + '/api/user/invest/do',
+            url: 'http://119.23.160.90:8080/api/user/invest/do',
             data: {
                 pid: pid,
                 amount: price,
@@ -256,5 +259,5 @@
     });
 })()
 </script>
-<script type="text/javascript" src="../js/manifest.js"></script><script type="text/javascript" src="../js/vendor.js"></script><script type="text/javascript" src="../js/app.js"></script></body>
+<script type="text/javascript" src="js/manifest.js"></script><script type="text/javascript" src="js/vendor.js"></script><script type="text/javascript" src="js/app.js"></script></body>
 </html>

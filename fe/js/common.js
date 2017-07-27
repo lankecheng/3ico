@@ -1,5 +1,19 @@
 (function () {
     $.ajax({
+        type: 'post',
+        url: 'http://119.23.160.90:8080/api/assist/verify',
+        data: {
+        },
+        headers: {
+            Authorization: localStorage.getItem('token'),
+        }
+    }).then(function (res) {
+
+    }).fail(function (res) {
+        localStorage.removeItem('token');
+        alert(res.responseJSON.error_msg);
+    });
+    $.ajax({
         type: 'get',
         url: 'http://119.23.160.90:8080/api/user/profile/info',
         headers: {
