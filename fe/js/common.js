@@ -22,7 +22,6 @@
             Authorization: localStorage.getItem('token'),
         }
     }).then(function (res) {
-        console.log(res);
         $('#js-login').html('<a href="/manage/index.html#/admin"><i class="ico-user"></i>个人中心</a>');
         $('#js-register').html('<span id="js-logout" class="register">退出</span>');
         $('.js-user-yue').html('');
@@ -40,4 +39,27 @@
             location.reload();
         });
     });
+
+    function getData() {
+        $.ajax({
+            type: 'get',
+            url: 'https://www.chbtc.com/getTradeData?symbol=btc',
+        }).then(function (res) {
+            var data = res.datas;
+            $('#js-BTC').html(data[data.length - 1].CNY);
+        }).fail(function (err) {
+        });
+        $.ajax({
+            type: 'get',
+            url: 'https://www.chbtc.com/getTradeData?symbol=eth',
+        }).then(function (res) {
+            var data = res.datas;
+            $('#js-ETH').html(data[data.length - 1].CNY);
+        });
+        setTimeout(function() {
+            getData();
+        }, 1000*10);
+    }
+
+    getData();
 })()
