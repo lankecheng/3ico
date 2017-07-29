@@ -194,6 +194,7 @@
     </div>
 
 
+<script src="js/popup.js"></script>
 <script type="text/javascript">
 (function() {
     var pid = location.search.split('=')[1];
@@ -234,9 +235,25 @@
                 Authorization: localStorage.getItem('token'),
             }
         }).then(function (res) {
-            alert('支持成功，感谢您的支持！');
+
+            var popup = new Popup();
+            popup.innerHTML =
+             '<div class="ui-dialog">支持成功，感谢您的支持！</div>';
+            popup.show();
+
+            setTimeout(function() {
+                popup.close().remove();
+            }, 2000);
+
         }).fail(function (res) {
-            alert(res.responseJSON.error_msg);
+            var popup = new Popup();
+            popup.innerHTML =
+             '<div class="ui-dialog">'+res.responseJSON.error_msg+'</div>';
+            popup.show();
+
+            setTimeout(function() {
+                popup.close().remove();
+            }, 2000);
         });
     });
 })()
