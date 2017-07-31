@@ -42,19 +42,24 @@
 
     function getData() {
         $.ajax({
-            type: 'get',
+            method: 'post',
             url: 'https://www.chbtc.com/getTradeData?symbol=btc',
+            dataType: 'jsonp',
         }).then(function (res) {
             var data = res.datas;
             $('#js-BTC').html(data[data.length - 1].CNY);
         }).fail(function (err) {
+            console.log(err);
         });
         $.ajax({
-            type: 'get',
+            method: 'get',
             url: 'https://www.chbtc.com/getTradeData?symbol=eth',
+            dataType: 'jsonp',
         }).then(function (res) {
             var data = res.datas;
             $('#js-ETH').html(data[data.length - 1].CNY);
+        }).fail(function(err) {
+            console.log(err);
         });
         setTimeout(function() {
             getData();
