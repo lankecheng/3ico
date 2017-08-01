@@ -1030,7 +1030,7 @@ a {
   .home .about1 .inner {
     position: absolute;
     left: 50%;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-left: 40px;
     line-height: 1.6;
     color: #fff; }
@@ -1047,13 +1047,13 @@ a {
       list-style: none; }
       .home .about1 .inner .list li {
         position: relative;
-        margin-top: 50px;
+        margin-top: 30px;
         padding-left: 120px; }
         .home .about1 .inner .list li .title {
           font-size: 24px; }
         .home .about1 .inner .list li .desc {
-          margin-top: 20px;
-          font-size: 14px; }
+          margin-top: 10px;
+          font-size: 12px; }
       .home .about1 .inner .list .ico {
         position: absolute;
         top: 0;
