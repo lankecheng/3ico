@@ -40,31 +40,31 @@
         });
     });
 
-    function getData() {
-        $.ajax({
-            method: 'post',
-            url: 'https://www.chbtc.com/getTradeData?symbol=btc',
-            dataType: 'jsonp',
-        }).then(function (res) {
-            var data = res.datas;
-            $('#js-BTC').html(data[data.length - 1].CNY);
-        }).fail(function (err) {
-            console.log(err);
-        });
-        $.ajax({
-            method: 'get',
-            url: 'https://www.chbtc.com/getTradeData?symbol=eth',
-            dataType: 'jsonp',
-        }).then(function (res) {
-            var data = res.datas;
-            $('#js-ETH').html(data[data.length - 1].CNY);
-        }).fail(function(err) {
-            console.log(err);
-        });
-        setTimeout(function() {
-            getData();
-        }, 1000*10);
-    }
+    // function getData() {
+    //     $.ajax({
+    //         method: 'post',
+    //         url: 'https://www.chbtc.com/getTradeData?symbol=btc',
+    //         dataType: 'jsonp',
+    //     }).then(function (res) {
+    //         var data = res.datas;
+    //         $('#js-BTC').html(data[data.length - 1].CNY);
+    //     }).fail(function (err) {
+    //         console.log(err);
+    //     });
+    //     $.ajax({
+    //         method: 'get',
+    //         url: 'https://www.chbtc.com/getTradeData?symbol=eth',
+    //         dataType: 'jsonp',
+    //     }).then(function (res) {
+    //         var data = res.datas;
+    //         $('#js-ETH').html(data[data.length - 1].CNY);
+    //     }).fail(function(err) {
+    //         console.log(err);
+    //     });
+    //     setTimeout(function() {
+    //         getData();
+    //     }, 1000*10);
+    // }
 
     // getData();
 })()
