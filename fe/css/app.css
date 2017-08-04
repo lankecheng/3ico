@@ -939,6 +939,7 @@ a {
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100%;
     border-radius: 3px; }
     .home .projects .bd .top .tip {
       position: absolute;
@@ -1172,14 +1173,14 @@ a {
 
 .project .left {
   float: left;
-  width: 616px;
+  width: 670px;
   min-height: 600px; }
   .project .left img {
     max-width: 100%; }
 
 .project .right {
   float: right;
-  width: 343px; }
+  width: 300px; }
   .project .right .mod {
     padding: 35px 30px;
     border: 1px solid #e2e2e2;
@@ -1217,7 +1218,7 @@ a {
           line-height: 30px; }
         .project .right .mod.info .item .content {
           font-size: 24px;
-          line-height: 1;
+          line-height: 30px;
           color: #22a875; }
       .project .right .mod.info .progress {
         margin-top: 40px; }
@@ -1252,7 +1253,7 @@ a {
           font-size: 14px;
           line-height: 1.5; }
       .project .right .mod.info .control input {
-        width: 150px;
+        width: 120px;
         height: 48px;
         border: 1px solid #ddd;
         border-radius: 3px;
@@ -1279,7 +1280,7 @@ a {
       vertical-align: bottom; }
     .project .right .mod.by .bd {
       margin-top: 30px;
-      padding-left: 90px;
+      padding-left: 80px;
       position: relative; }
       .project .right .mod.by .bd .avatar {
         position: absolute;
@@ -1298,7 +1299,7 @@ a {
         color: #333333; }
       .project .right .mod.by .bd .content .btn {
         margin-top: 25px;
-        width: 175px;
+        width: 130px;
         height: 40px;
         line-height: 40px;
         text-align: center;
